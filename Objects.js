@@ -17,9 +17,9 @@ class Person {
 
 const person1 = new Person('Ferdinald', 34);
 const person2 = { name: 'Alice', age: 28 };
-//person1.greet.call(person2);  
+person1.greet.call(person2);  
 
-//const boundGreet = person1.greet.bind(person2);
-//boundGreet();  
+const boundGreet = person1.greet.bind(person2);
+boundGreet();  
 
 person1.greet.apply(person2);  

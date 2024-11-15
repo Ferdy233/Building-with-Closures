@@ -4,7 +4,7 @@ function createCounter() {
     return {
         increment() {
             count++; 
-            console.log(this.count);  //this will return undefined
+            console.log(this.count);  //this will return undefined because it does not know this.count
         },
         getCount: function() {
             return count;  

@@ -1,20 +1,20 @@
 function createCounter() {
-    let count = 0; 
+    let count = 0;  // Initialize count variable
 
     return {
         increment() {
-            count++; 
-            console.log(this.count);  //this will return undefined
+            count++;  // Increment count
+            console.log(this.count);  // 'this.count' is undefined because 'this' refers to the object, not the variable 'count'
         },
         getCount: function() {
-            return count;  
+            return count;  // Return the current count
         }
     };
 }
 
-const counter = createCounter(); 
+const counter = createCounter();  // Create counter object
 
-counter.increment();  
-console.log(counter.getCount());  
-counter.increment(); 
-console.log(counter.getCount()); 
+counter.increment();  // Increment count and log 'undefined'
+console.log(counter.getCount());  // Get current count (0)
+counter.increment();  // Increment count again
+console.log(counter.getCount());  // Get current count (1)
